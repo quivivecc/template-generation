@@ -1,0 +1,56 @@
+{
+    "class": "Eersteklass",
+    "first_innings": {
+        "team": "Team A",
+        "score": 250,
+        "wickets": 8,
+        "overs": 50,
+        "top_scorers": [{
+            "name": "Player X",
+            "stats": "95 (60)"
+        },{
+            "name": "Player Y",
+            "stats": "50 (75)"
+        },{
+            "name": "Player Z",
+            "stats": "25 (40)"
+        }],
+        "top_bowlers": [{
+            "name": "Player A",
+            "stats": "8-2-45-3"
+        },{
+            "name": "Player B",
+            "stats": "7-0-35-1"
+        },{
+            "name": "Player C",
+            "stats": "10-0-43-1"
+        }]
+    },
+    "second_innings": {
+        "team": "Team B",
+        "score": 245,
+        "wickets": 10,
+        "overs": 49.3,
+        "top_scorers": [{
+            "name": "Player D",
+            "stats": "70 (60)"
+        },{
+            "name": "Player E",
+            "stats": "45 (75)"
+        },{
+            "name": "Player F",
+            "stats": "33 (40)"
+        }],
+        "top_bowlers": [{
+            "name": "Player G",
+            "stats": "8-2-25-3"
+        },{
+            "name": "Player H",
+            "stats": "10-1-40-2"
+        },{
+            "name": "Player I",
+            "stats": "7-0-28-1"
+        }]
+    },
+    "man_of_the_match": "Player X"
+}

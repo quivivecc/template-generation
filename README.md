@@ -74,3 +74,4 @@ The script helps to create match summary based on JSON input.
         MacOS: /Library/Fonts/Arial Unicode.ttf
         Linux: /usr/share/fonts/arial.ttf
     ```
+* Script needs to be updated, when we use new match summary template as the axes co-ordinates are based on the matchsummary_template.png file under resources/images

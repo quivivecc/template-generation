@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 import glob
+import json
 
 def draw_text(draw, text, position, font, color="black"):
     draw.text(position, text, fill=color, font=font)
@@ -90,62 +91,9 @@ def fill_match_summary_with_image(template_path, output_path, match_data):
     img.save(output_path)
 
 # Example match data
-match_data = {
-    'class': 'Eersteklass',
-    'first_innings': {
-        'team': 'Qui Vive 1',
-        'score': 250,
-        'wickets': 8,
-        'overs': 49.5,
-        'top_scorers': [{
-            'name': 'Player X',
-            'stats': '95 (60)'
-        },{
-            'name': 'Player Y',
-            'stats': '50 (75)'
-        },{
-            'name': 'Player Z',
-            'stats': '25 (40)'
-        }],
-        'top_bowlers': [{
-            'name': 'Player A',
-            'stats': '8-2-45-3'
-        },{
-            'name': 'Player B',
-            'stats': '7-0-35-1'
-        },{
-            'name': 'Player C',
-            'stats': '10-0-43-1'
-        }]
-    },
-    'second_innings': {
-        'team': 'VRA 2',
-        'score': 245,
-        'wickets': 10,
-        'overs': 49.3,
-        'top_scorers': [{
-            'name': 'Player D',
-            'stats': '70 (60)'
-        },{
-            'name': 'Player E',
-            'stats': '45 (75)'
-        },{
-            'name': 'Player F',
-            'stats': '33 (40)'
-        }],
-        'top_bowlers': [{
-            'name': 'Player G',
-            'stats': '8-2-25-3'
-        },{
-            'name': 'Player H',
-            'stats': '10-1-40-2'
-        },{
-            'name': 'Player I',
-            'stats': '7-0-28-1'
-        }]
-    },
-    'man_of_the_match': 'Player X'
-}
+with open('matchdata.json') as f:
+    match_data = json.load(f)
+
 
 # Paths to the template, output image, and logo image
 template_path = "resources/images/matchsummary_template.png"
